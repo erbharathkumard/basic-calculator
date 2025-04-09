@@ -1,0 +1,86 @@
+body{
+    margin: 0;
+    background: linear-gradient(135deg,  #1e1e2f, #24242e);
+    font-family: 'Orbitron', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.calculator {
+    background-color: #292942;
+    border-radius: 25px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    animation: float 4s infinite ease-in-out;
+    max-width: 400px;
+    width: 100%;
+}
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+h1 {
+    color: orange;
+    text-align: center;
+    font-size: 1.8rem;
+}
+#display {
+    width: 100%;
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    text-align: right;
+    background: #fafafa;
+    color: #000;
+}
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    gap: 12px;
+}
+.btn {
+    padding: 18px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+    background-color: #fff;
+    color: #000;
+}
+.btn:hover {
+    background-color:rgb(220, 156, 36);
+    color: #000;
+    transform: scale(1.1);
+}
+.equal { background-color: #4caf50; }
+.clear { background-color: #e53935; }
+.del { background-color:#7f7d81 }
+.game-mode {
+    margin-top: 20px;
+    text-align:center;
+    color: #fff;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 15px;
+    }
+    h1 {
+        font-size: 1.5rem;
+    }
+    #display {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+    .btn {
+        padding: 15px;
+        font-size: 1rem;
+    }
+}
+
+
